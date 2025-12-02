@@ -5,67 +5,67 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>نتيجة مدرسة الرحاب الخاصة</title>
   <style>
-    body {
-      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-      direction: rtl;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #cce0f0, #f5f7fb);
-    }
+ body {
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  direction: rtl;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #cce0f0, #f5f7fb);
+}
 
-    .container {
-      max-width: 1000px;
-      margin: 50px auto;
-      padding: 20px;
-    }
+.container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+}
 
-    .card {
-      background: white;
-      border-radius: 25px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-      padding: 40px 30px 30px 30px;
-      transition: all 0.3s ease;
-      position: relative;
-    }
+.card {
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  padding: 40px 30px 30px 30px;
+  transition: all 0.3s ease;
+  position: relative;
+}
 
-    .page-title {
-      text-align: center;
-      font-size: 32px;
-      color: #13245C;
-      margin-bottom: 30px;
-      font-weight: 700;
-    }
+.page-title {
+  text-align: center;
+  font-size: 32px;
+  color: #13245C;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
 
-    .logo-container {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      border: 3px solid #13245C;
-      position: absolute;
-      top: -40px;
-      left: 30px;
-      background: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      overflow: hidden; 
-    }
+.logo-container {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #13245C;
+  position: absolute;
+  top: -40px;
+  left: 30px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden; 
+}
 
-    .logo-container img {
-      width: 65px; 
-      height: 65px;
-      object-fit: contain; 
-    }
+.logo-container img {
+  width: 65px; 
+  height: 65px;
+  object-fit: contain; 
+}
 
-    h1 {
-      margin: 0 0 30px 0;
-      font-size: 28px;
-      color: #0b4b6f;
-      text-align: center;
-    }
+h1 {
+  margin: 0 0 30px 0;
+  font-size: 28px;
+  color: #0b4b6f;
+  text-align: center;
+}
 
-  .controls {
+.controls {
   display: flex;
   flex-direction: column;
   align-items: center; 
@@ -88,14 +88,6 @@ label.small {
   flex-shrink: 0; 
   margin-right: -200px;
 }
-@media (max-width: 600px) {
-  label.small {
-    margin-right: 0;      
-    text-align: center;   
-  }
-}
-
-
 
 input[type="text"] {
   width: 300px;
@@ -105,82 +97,121 @@ input[type="text"] {
   border: 1px solid #b0c7d8;
 }
 
-    input[type="text"]:focus {
-      outline: none;
-      border-color: #0b79a6;
-      box-shadow: 0 0 10px rgba(11,121,166,0.25);
-    }
+input[type="text"]:focus {
+  outline: none;
+  border-color: #0b79a6;
+  box-shadow: 0 0 10px rgba(11,121,166,0.25);
+}
 
-    button {
-      width: 320px;
-      padding: 15px;
-      font-size: 16px;
-      border-radius: 12px;
-      border: none;
-      background: #0b4b6f;
-      color: white;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
+button {
+  width: 320px;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: none;
+  background: #13245C;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
-    button:hover {
-      background: #095b7c;
-      transform: translateY(-2px);
-    }
+button:hover {
+  background: #095b7c;
+  transform: translateY(-2px);
+}
 
-    .result {
-      margin-top: 25px;
-      overflow-x: auto;
-    }
+.result {
+  margin-top: 25px;
+  overflow-x: auto;
+}
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 15px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      margin-top: 15px;
-    }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  margin-top: 15px;
+}
 
-    th, td {
-      padding: 14px;
-      border: 1px solid #e6eef5;
-      text-align: center;
-    }
+th, td {
+  padding: 14px;
+  border: 1px solid #e6eef5;
+  text-align: center;
+}
 
-    th {
-      background: #0b79a6;
-      color: white;
-      font-weight: 600;
-    }
+th {
+  background: #13245C;
+  color: white;
+  font-weight: 600;
+}
 
-    tbody tr:nth-child(even) {
-      background: #f0f9fc;
-    }
+tbody tr:nth-child(even) {
+  background: #f0f9fc;
+}
 
-    tbody tr:hover {
-      background: #d6edf8;
-      transition: background 0.2s;
-    }
+tbody tr:hover {
+  background: #d6edf8;
+  transition: background 0.2s;
+}
 
-    .error {
-      color: #b00020;
-      font-weight: 700;
-      text-align: center;
-      margin-top: 12px;
-    }
+.error {
+  color: #b00020;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 12px;
+}
 
-    @media(max-width:600px){
-      .input-row {
-        flex-direction: column;
-      }
-      label.small, input[type="text"], button {
-        /* width: 100%; */
-        max-width: 320px;
-      }
-    }
+/* ----------------------- Responsive ----------------------- */
+@media(max-width:600px){
+  .input-row {
+    flex-direction: column;
+  }
+  label.small, input[type="text"], button {
+    max-width: 320px;
+    text-align: center;
+    margin-right: 0;
+  }
+
+
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 95%;
+  }
+
+  thead tr {
+    display: none; 
+  }
+
+  tbody tr {
+    margin-bottom: 10px;
+    padding: 8px;
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+  }
+
+  tbody td {
+    display: flex;
+    justify-content: space-between; 
+    padding: 6px 10px;
+    border-bottom: 1px solid #eee;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #13245C;
+    margin-right: 10px;
+  }
+
+  tbody td:last-child {
+    border-bottom: 0;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -273,7 +304,10 @@ input[type="text"] {
       let tableHtml = '<table><thead><tr>';
       headers.forEach(h => { tableHtml += `<th>${h}</th>`; });
       tableHtml += '</tr></thead><tbody><tr>';
-      headers.forEach(h => { tableHtml += `<td>${row[indexByHeader[h]] || ''}</td>`; });
+      headers.forEach(h => { 
+        const value = row[indexByHeader[h]] || '';
+        tableHtml += `<td data-label="${h}">${value}</td>`; 
+      });
       tableHtml += '</tr></tbody></table>';
       resultEl.innerHTML = tableHtml;
     }
