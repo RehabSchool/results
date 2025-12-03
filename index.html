@@ -72,19 +72,41 @@ body {
   gap: 10px;
   margin-bottom: 10px;
 }
-label.small { font-size: 16px; color: #555; white-space: nowrap; flex-shrink: 0; margin-right: -200px; }
- input[type="text"] {
-   width: 300px; padding: 12px; 
+
+label.small { 
+  font-size: 16px; 
+  color: #555; 
+  white-space: nowrap; 
+  flex-shrink: 0; 
+  margin-right: -200px; 
+}
+
+input[type="text"] {
+   width: 300px; 
+   padding: 12px; 
    font-size: 16px;
-    border-radius: 12px; 
-    border: 1px solid #b0c7d8; }
-     input[type="text"]:focus { 
-      outline: none; 
-      border-color: #0b79a6; 
-      box-shadow: 0 0 10px rgba(11,121,166,0.25); } 
-      button { width: 320px; padding: 15px; font-size: 16px; 
-        border-radius: 12px; border: none; background: #13245C; 
-        color: white; font-weight: 600; cursor: pointer; transition: all 0.3s ease; }
+   border-radius: 12px; 
+   border: 1px solid #b0c7d8; 
+}
+
+input[type="text"]:focus { 
+  outline: none; 
+  border-color: #0b79a6; 
+  box-shadow: 0 0 10px rgba(11,121,166,0.25); 
+} 
+
+button { 
+  width: 320px; 
+  padding: 15px; 
+  font-size: 16px; 
+  border-radius: 12px; 
+  border: none; 
+  background: #13245C; 
+  color: white; 
+  font-weight: 600; 
+  cursor: pointer; 
+  transition: all 0.3s ease; 
+}
 
 button:hover {
   background: #095b7c;
@@ -125,17 +147,27 @@ tbody tr:hover {
   transition: background 0.2s;
 }
 
+
+td.grade {
+  font-weight: 700;
+  font-size: 20px;
+}
+
 .error {
   color: #b00020;
   font-weight: 700;
   text-align: center;
   margin-top: 12px;
 }
+
 @media(max-width:580px){ 
   .input-row { flex-direction: column; } 
-label.small, input[type="text"], button
- { max-width: 320px; text-align: center; margin-right: 0; }}
-
+  label.small, input[type="text"], button {
+    max-width: 320px; 
+    text-align: center; 
+    margin-right: 0; 
+  }
+}
 </style>
 </head>
 <body>
@@ -248,7 +280,7 @@ function showResultRow(row){
       const grade = row[indexByHeader[h]] || '';
       tableHtml += `<tr>
                       <td>${h}</td>
-                      <td>${grade}</td>
+                      <td class="grade">${grade}</td>
                     </tr>`;
     }
   });
@@ -276,4 +308,3 @@ loadSheet();
 </script>
 </body>
 </html>
-
