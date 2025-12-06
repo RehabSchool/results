@@ -250,7 +250,7 @@ td.grade {
 </div>
 
 <script>
-const SHEET_CSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ89oJcBhSmmlo4MaMk6v5goSiNq68VFOvhDD-ZnS-sHGC7GedUePTlnxXSIraHl48c32D93nNJhZnQ/pub?gid=0&single=true&output=csv';
+const SHEET_CSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSwsZdcmEqzDXatePFE6KUN9aMG46wbZ4GEdiYaz_maTiQeag8NcoeSGm4BFoJWxOKVnd8pDaKTZEL0/pub?gid=0&single=true&output=csv';
 const resultEl = document.getElementById('result');
 const searchBtn = document.getElementById('searchBtn');
 const nidInput = document.getElementById('nid');
@@ -317,7 +317,7 @@ function showResultRow(row){
     return; 
   }
 
-  const basicFields = ['اسم الطالب', 'الرقم القومى','الصف الدراسي', 'الفصل','الامتحـــــــــان' ];
+  const basicFields = ['اسم الطالب', 'الرقم القومى','الصف الدراسى', 'الفصل','الامتحـــــــــان' ];
   let basicTable = '<table class="basic-info-table"><tbody><tr>';
   basicFields.forEach(h=>{
     if(indexByHeader[h] !== undefined){
@@ -360,6 +360,7 @@ searchBtn.addEventListener('click', async () => {
   showResultRow(row);
 });
 
+
 nidInput.addEventListener('keydown',(e)=>{ 
   if(e.key==='Enter') searchBtn.click(); 
 });
@@ -368,5 +369,6 @@ loadSheet();
 </script>
 </body>
 </html>
+
 
 
