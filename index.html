@@ -161,69 +161,71 @@ td.grade {
 
 @media(max-width:580px){
 
-   .input-row { 
-    flex-direction: column; 
-  } 
-
-  label.small,
-  input[type="text"], 
-  button {
-    max-width: 320px;
-    text-align: center;
-    margin-right: 0;
-  }
-  .basic-info-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 6px;
-  }
-
   .basic-info-table th {
     display: none;
   }
-
-  .basic-info-table td {
-    display: flex;
-    align-items: stretch;
-    position: relative;
-    padding: 0;
-    border: none;
-    background: none;
+ .input-row {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
   }
 
+  label.small,
+  input[type="text"],
+  button {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-right: 0 !important;
+    text-align: center;
+  }
+
+  label.small {
+    margin-right: 0 !important; 
+    font-size: 16px;
+  }
+
+  input[type="text"] {
+    width: 100% !important;
+  }
+
+.basic-info-table,
+  .basic-info-table tbody,
+  .basic-info-table tr,
+  .basic-info-table td {
+    display: block;
+ 
+  }
+
+  .basic-info-table td {
+    position: relative;
+    padding: 14px 120px 14px 12px; 
+    margin-bottom: 10px;
+    background: #d6edf8;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 6px;
+    border: 1px solid #e6eef5;
+    text-align: center;
+    direction: rtl;    
+  }
 
   .basic-info-table td::before {
     content: attr(data-label);
-    background: #13245C;
-    color: white;
+    position: absolute;
+    right: 0;              
+    top: 0;
+    height: 100%;
+    width: 110px;
+    background:#13245C ;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: bold;
-    width: 130px;
-    text-align: center;
-    padding: 12px 8px;
     border-radius: 6px 0 0 6px;
+    border-left: 1px solid #e6eef5;
   }
-
-  .basic-info-table td span.value {
-  flex: 1;
-  background: #d6edf8;
-  padding: 12px 10px;
-  border-radius: 0 6px 6px 0;
-  border: 1px solid #13245C;
-  border-left: none;
-  font-size: 17px;
-  font-weight: 600;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
-
-
-
-
-}
-
 
 </style>
 </head>
@@ -366,6 +368,5 @@ loadSheet();
 </script>
 </body>
 </html>
-
 
 
