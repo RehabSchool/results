@@ -48,19 +48,19 @@ body {
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .logo-container img {
-  width: 65px; 
+  width: 65px;
   height: 65px;
-  object-fit: contain; 
+  object-fit: contain;
 }
 
 .controls {
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
   gap: 10px;
   margin-bottom: 30px;
 }
@@ -68,44 +68,44 @@ body {
 .input-row {
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   gap: 10px;
   margin-bottom: 10px;
 }
 
-label.small { 
-  font-size: 16px; 
-  color: #555; 
-  white-space: nowrap; 
-  flex-shrink: 0; 
-  margin-right: -200px; 
+label.small {
+  font-size: 16px;
+  color: #555;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-right: -200px;
 }
 
 input[type="text"] {
-   width: 300px; 
-   padding: 12px; 
-   font-size: 16px;
-   border-radius: 12px; 
-   border: 1px solid #b0c7d8; 
+  width: 300px;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 1px solid #b0c7d8;
 }
 
-input[type="text"]:focus { 
-  outline: none; 
-  border-color: #0b79a6; 
-  box-shadow: 0 0 10px rgba(11,121,166,0.25); 
-} 
+input[type="text"]:focus {
+  outline: none;
+  border-color: #0b79a6;
+  box-shadow: 0 0 10px rgba(11,121,166,0.25);
+}
 
-button { 
-  width: 320px; 
-  padding: 15px; 
-  font-size: 16px; 
-  border-radius: 12px; 
-  border: none; 
-  background: #13245C; 
-  color: white; 
-  font-weight: 600; 
-  cursor: pointer; 
-  transition: all 0.3s ease; 
+button {
+  width: 320px;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: none;
+  background: #13245C;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 button:hover {
@@ -147,7 +147,6 @@ tbody tr:hover {
   transition: background 0.2s;
 }
 
-
 td.grade {
   font-weight: 700;
   font-size: 20px;
@@ -160,14 +159,48 @@ td.grade {
   margin-top: 12px;
 }
 
-@media(max-width:580px){ 
-  .input-row { flex-direction: column; } 
-  label.small, input[type="text"], button {
-    max-width: 320px; 
-    text-align: center; 
-    margin-right: 0; 
+@media(max-width:580px){
+
+  .basic-info-table th {
+    display: none;
+  }
+  .input-row {
+    flex-direction: column;
+  }
+
+  label.small,
+  input[type="text"],
+  button {
+    max-width: 320px;
+    text-align: center;
+    margin-right: 0;
+  }
+
+
+  /* .basic-info-table td {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+  } */
+
+  .basic-info-table td {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    
+  }
+
+  .basic-info-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #13245C;
   }
 }
+
 </style>
 </head>
 <body>
@@ -258,7 +291,7 @@ function showResultRow(row){
     return; 
   }
 
-  const basicFields = ['اسم الطالب', 'الرقم القومى', 'الفصل', 'الصف الدراسي'];
+  const basicFields = ['اسم الطالب', 'الرقم القومى','الصف الدراسي', 'الفصل','الامتحـــــــــان' ];
   let basicTable = '<table class="basic-info-table"><tbody><tr>';
   basicFields.forEach(h=>{
     if(indexByHeader[h] !== undefined){
@@ -266,12 +299,13 @@ function showResultRow(row){
     }
   });
   basicTable += '</tr><tr>';
-  basicFields.forEach(h=>{
-    if(indexByHeader[h] !== undefined){
-      const value = row[indexByHeader[h]] || '';
-      basicTable += `<td>${value}</td>`;
-    }
-  });
+ basicFields.forEach(h=>{
+  if(indexByHeader[h] !== undefined){
+    const value = row[indexByHeader[h]] || '';
+    basicTable += `<td data-label="${h}">${value}</td>`;
+  }
+});
+
   basicTable += '</tr></tbody></table>';
 
   let tableHtml = '<table><thead><tr><th>المادة</th><th>درجة الطالب</th></tr></thead><tbody>';
