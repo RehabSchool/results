@@ -161,50 +161,67 @@ td.grade {
 
 @media(max-width:580px){
 
+   .input-row { 
+    flex-direction: column; 
+  } 
+
+  label.small,
+  input[type="text"], 
+  button {
+    max-width: 320px;
+    text-align: center;
+    margin-right: 0;
+  }
+  .basic-info-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 6px;
+  }
+
   .basic-info-table th {
     display: none;
   }
 
-  .input-row { flex-direction: column; } label.small,
-   input[type="text"], button 
-   { max-width: 320px;
-     text-align: center;
-      margin-right: 0; }
-
   .basic-info-table td {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 18px;
-    font-weight: 600;
-    padding: 10px;
-    background: #d6edf8;
-    border: 1px solid #13245C; 
+    align-items: stretch;
     position: relative;
-    margin-bottom: 5px;
-  }
-
-  .basic-info-table td::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 1px;
-    background: #13245C;
+    padding: 0;
+    border: none;
+    background: none;
   }
 
 
   .basic-info-table td::before {
     content: attr(data-label);
+    background: #13245C;
+    color: white;
     font-weight: bold;
-    color: #13245C;
-    margin-right: 10px;
+    width: 130px;
+    text-align: center;
+    padding: 12px 8px;
+    border-radius: 6px 0 0 6px;
   }
-  
+
   .basic-info-table td span.value {
-    margin-left: 10px;
-  }
+  flex: 1;
+  background: #d6edf8;
+  padding: 12px 10px;
+  border-radius: 0 6px 6px 0;
+  border: 1px solid #13245C;
+  border-left: none;
+  font-size: 17px;
+  font-weight: 600;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+
 }
 
 
@@ -349,4 +366,6 @@ loadSheet();
 </script>
 </body>
 </html>
+
+
 
