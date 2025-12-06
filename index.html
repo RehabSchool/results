@@ -164,42 +164,49 @@ td.grade {
   .basic-info-table th {
     display: none;
   }
-  .input-row {
-    flex-direction: column;
-  }
 
-  label.small,
-  input[type="text"],
-  button {
-    max-width: 320px;
-    text-align: center;
-    margin-right: 0;
-  }
-
-
-  /* .basic-info-table td {
-    display: flex;
-    justify-content: space-between;
-    font-size: 18px;
-    font-weight: 600;
-    border: none;
-  } */
+  .input-row { flex-direction: column; } label.small,
+   input[type="text"], button 
+   { max-width: 320px;
+     text-align: center;
+      margin-right: 0; }
 
   .basic-info-table td {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: 18px;
     font-weight: 600;
-    border: none;
-    
+    padding: 10px;
+    background: #d6edf8;
+    border: 1px solid #13245C; 
+    position: relative;
+    margin-bottom: 5px;
   }
+
+  .basic-info-table td::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #13245C;
+  }
+
 
   .basic-info-table td::before {
     content: attr(data-label);
     font-weight: bold;
     color: #13245C;
+    margin-right: 10px;
+  }
+  
+  .basic-info-table td span.value {
+    margin-left: 10px;
   }
 }
+
 
 </style>
 </head>
@@ -342,3 +349,4 @@ loadSheet();
 </script>
 </body>
 </html>
+
